@@ -1,0 +1,36 @@
+# Environment Files
+.env
+.env.*
+
+# Node Modules
+node_modules/
+
+# Logs
+*.log
+logs/
+
+# Build Artifacts
+dist/
+build/
+coverage/
+.next/
+out/
+tmp/
+.cache/
+
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs
+.vscode/
+.idea/
+*.suo
+*.sw?
+*.user
+
+# Optional: lock files (if team agrees)
+# yarn.lock
+# package-lock.json
+
