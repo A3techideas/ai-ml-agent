@@ -1,3 +1,4 @@
+ 
 # Environment Files
 .env
 .env.*
@@ -33,4 +34,69 @@ desktop.ini
 # Optional: lock files (if team agrees)
 # yarn.lock
 # package-lock.json
+ 
+# Secrets
+.env
+.env.*
 
+# Node
+node_modules/
+npm-debug.log*
+
+# Build
+dist/
+build/
+android/app/build/
+ios/build/
+
+# Coverage
+coverage/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Certificates/Keys
+*.pem
+*.key
+*.crt
+*.cert
+
+# Expo (if using)
+.expo/
+.expo-shared/
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+*.bak
+*.tmp
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+node_modules/
+dist/
+build/
+coverage/
+out/
+target/
+tmp/
+.cache/
+.nyc_output/
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.crt
+*.cert
+*.credentials
+ 
