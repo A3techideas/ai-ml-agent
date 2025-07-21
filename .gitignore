@@ -100,3 +100,4 @@ tmp/
 *.cert
 *.credentials
  
+.env
