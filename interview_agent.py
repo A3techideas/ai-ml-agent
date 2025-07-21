@@ -1,6 +1,5 @@
 import openai
 from config import OPENAI_API_KEY
-
 openai.api_key = OPENAI_API_KEY
 
 def generate_feedback(transcript, candidate_name, role):
@@ -14,7 +13,7 @@ def generate_feedback(transcript, candidate_name, role):
     - Final Recommendation (Yes/No with justification)
 
     Interview Transcript:
-    """{transcript}"""
+    """{transcript}""""
     """
     response = openai.ChatCompletion.create(
         model="gpt-4",
