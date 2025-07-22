@@ -1,7 +1,7 @@
-import openai
+from openai import OpenAI
 from config import OPENAI_API_KEY
 
-openai.api_key = OPENAI_API_KEY
+client = OpenAI(api_key=OPENAI_API_KEY)
 
 def generate_feedback(transcript, candidate_name, role):
     prompt = f"""
@@ -16,14 +16,19 @@ def generate_feedback(transcript, candidate_name, role):
     Interview Transcript:
     {transcript}
     """
-    response = openai.ChatCompletion.create(
+    response = client.chat.completions.create(
         model="gpt-4",
         messages=[{"role": "user", "content": prompt}],
         temperature=0.7,
     )
-    return response['choices'][0]['message']['content']
+    return response.choices[0].message.content
+
 
 def transcribe_audio(file_path):
     with open(file_path, "rb") as f:
-        response = openai.Audio.transcribe("whisper-1", file=f)
-    return response['text']
+        response = client.audio.transcriptions.create(
+            model="whisper-1",
+            file=f
+        )
+    return response.text
+
