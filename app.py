@@ -9,6 +9,10 @@ from jinja2 import Environment, FileSystemLoader
 app = Flask(__name__)
 env = Environment(loader=FileSystemLoader("templates"))
 
+@app.route('/', methods=['GET'])
+def home():
+    return '🚀 AI-ML Agent API is running! Use POST /interview to get feedback.'
+
 @app.route('/interview', methods=['POST'])
 def process_interview():
     data = request.json
@@ -40,3 +44,4 @@ def process_interview():
 
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0")
+
